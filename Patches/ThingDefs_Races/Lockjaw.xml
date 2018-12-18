@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+		
+			<li Class="ModCheck.isModLoaded">
+				<modName>Alpha Animals</modName>
+				<yourMod>Alpha Animals CE Patch</yourMod>
+			</li>
+	
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="AA_Lockjaw"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>QuadrupedLow</bodyShape>
+				</li>
+				</value>
+			</li>
+						
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="AA_Lockjaw"]/statBases</xpath>
+				<value>
+				<MeleeDodgeChance>0.03</MeleeDodgeChance>
+				<MeleeCritChance>0.45</MeleeCritChance>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="AA_Lockjaw"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>AA_LockJawDamage</li>
+							</capacities>
+							<power>13</power>
+							<cooldownTime>1.85</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetration>0.42</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.65</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.13</armorPenetration>
+							<chanceFactor>0.2</chanceFactor>
+						</li>
+					</tools>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

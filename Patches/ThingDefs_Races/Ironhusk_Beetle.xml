@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+		
+			<li Class="ModCheck.isModLoaded">
+				<modName>Alpha Animals</modName>
+				<yourMod>Alpha Animals CE Patch</yourMod>
+			</li>
+	
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="AA_IronhuskBeetle"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>QuadrupedLow</bodyShape>
+				</li>
+				</value>
+			</li>
+						
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="AA_IronhuskBeetle"]/statBases</xpath>
+				<value>
+				<MeleeDodgeChance>0.12</MeleeDodgeChance>
+				<MeleeCritChance>0.1</MeleeCritChance>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="AA_IronhuskBeetle"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>Bite</li>
+							</capacities>
+							<power>27</power>
+							<cooldownTime>2.6</cooldownTime>
+							<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+							<armorPenetration>0.28</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>9</power>
+							<cooldownTime>1.65</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<surpriseAttack>
+							  <extraMeleeDamages>
+								<li>
+								  <def>Stun</def>
+								  <amount>21</amount>
+								</li>
+							  </extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetration>0.16</armorPenetration>
+							<chanceFactor>0.5</chanceFactor>
+						</li>
+					</tools>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

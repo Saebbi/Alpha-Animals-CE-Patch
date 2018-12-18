@@ -21,7 +21,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>*/ThingDef[defName="AA_AnimusVox"]/statBases</xpath>
 				<value>
-				<MeleeDodgeChance>0.23</MeleeDodgeChance>
+				<MeleeDodgeChance>0.39</MeleeDodgeChance>
 				<MeleeCritChance>0.65</MeleeCritChance>
 				</value>
 			</li>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+		
+			<li Class="ModCheck.isModLoaded">
+				<modName>Alpha Animals</modName>
+				<yourMod>Alpha Animals CE Patch</yourMod>
+			</li>
+	
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="AA_MammothWorm"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>Serpentine</bodyShape>
+				</li>
+				</value>
+			</li>
+						
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="AA_MammothWorm"]/statBases</xpath>
+				<value>
+				<MeleeDodgeChance>0.08</MeleeDodgeChance>
+				<MeleeCritChance>0.1</MeleeCritChance>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="AA_MammothWorm"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>body</label>
+							<capacities><li>AA_SiegeBlunt</li></capacities>
+							<power>30</power>
+							<cooldownTime>1.9</cooldownTime>
+							<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+							<surpriseAttack>
+								<extraMeleeDamages>
+									<li>
+										<def>Stun</def>
+										<amount>21</amount>
+									</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetration>0.21</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<capacities><li>Stab</li></capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.12</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

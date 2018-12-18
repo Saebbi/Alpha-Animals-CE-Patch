@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+		
+			<li Class="ModCheck.isModLoaded">
+				<modName>Alpha Animals</modName>
+				<yourMod>Alpha Animals CE Patch</yourMod>
+			</li>
+	
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="AA_SandSquid"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>Serpentine</bodyShape>
+				</li>
+				</value>
+			</li>
+						
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="AA_SandSquid"]/statBases</xpath>
+				<value>
+				<MeleeDodgeChance>0.14</MeleeDodgeChance>
+				<MeleeCritChance>0.1</MeleeCritChance>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="AA_SandSquid"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities><li>Bite</li></capacities>
+							<power>12</power>
+							<cooldownTime>2.1</cooldownTime>
+							<linkedBodyPartsGroup>AA_Mouth</linkedBodyPartsGroup>
+							<armorPenetration>0.16</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>tentacle</label>
+							<capacities><li>Blunt</li></capacities>
+							<power>18</power>
+							<cooldownTime>1.65</cooldownTime>
+							<linkedBodyPartsGroup>AA_TentacleAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.17</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
