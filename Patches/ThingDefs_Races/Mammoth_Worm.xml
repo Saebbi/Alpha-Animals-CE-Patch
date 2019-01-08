@@ -35,7 +35,6 @@
 							<capacities><li>AA_SiegeBlunt</li></capacities>
 							<power>30</power>
 							<cooldownTime>1.9</cooldownTime>
-							<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
 							<surpriseAttack>
 								<extraMeleeDamages>
 									<li>
