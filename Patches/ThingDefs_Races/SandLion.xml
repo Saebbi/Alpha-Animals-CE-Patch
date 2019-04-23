@@ -10,7 +10,7 @@
 			</li>
 	
 			<li Class="PatchOperationAddModExtension">
-				<xpath>*/ThingDef[defName="AA_ArcticLion"]</xpath>
+				<xpath>*/ThingDef[defName="AA_SandLion"]</xpath>
 				<value>
 				<li Class="CombatExtended.RacePropertiesExtensionCE">
 					<bodyShape>Quadruped</bodyShape>
@@ -19,7 +19,7 @@
 			</li>
 						
 			<li Class="PatchOperationAdd">
-				<xpath>*/ThingDef[defName="AA_ArcticLion"]/statBases</xpath>
+				<xpath>*/ThingDef[defName="AA_SandLion"]/statBases</xpath>
 				<value>
 				<MeleeDodgeChance>0.17</MeleeDodgeChance>
 				<MeleeCritChance>0.3</MeleeCritChance>
@@ -27,7 +27,7 @@
 			</li>
 			
 			<li Class="PatchOperationReplace">
-				<xpath>*/ThingDef[defName="AA_ArcticLion"]/tools</xpath>
+				<xpath>*/ThingDef[defName="AA_SandLion"]/tools</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">
@@ -92,7 +92,7 @@
 							<cooldownTime>1.75</cooldownTime>
 							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 							<armorPenetration>0.09</armorPenetration>
-							<chanceFactor>0.1</chanceFactor>
+							<chanceFactor>0.2</chanceFactor>
 						</li>
 					</tools>
 				</value>
